@@ -1,10 +1,23 @@
 # U6143_ssd1306
 ## Preparation
+Mount the sd card
+
+edit ``config.txt`` and add these two lines to the bottom:
 ```bash
-sudo raspi-config
+dtparam=i2c_vc=on
+dtparam=i2c_arm=on
 ```
-Choose Interface Options 
-Enable i2c
+
+Next up, create a folder called ``CONFIG``
+
+make a subfolder called ``modules``
+
+create a file with the name ``rpi-i2c.conf`` and with the following content:
+
+```bash
+i2c-dev
+```
+
 
 ##  Clone U6143_ssd1306 library 
 ```bash
